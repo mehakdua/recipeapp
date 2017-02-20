@@ -8,7 +8,7 @@ import {RecipeItemComponent} from './recipe-item.component';
 export class RecipeListComponent {
 	recipes:Recipe[]=[];
 	recipe=new Recipe("Allo tikki","Snacks","../../../assets/Aloo-Tikki.jpg");
-	@Output() selectedRecipe = new EventEmitter();
+	@Output() selectedRecipe = new EventEmitter<Recipe>();
     constructor() { }
     onSelected(recipe:Recipe){
     console.log(recipe.name);
