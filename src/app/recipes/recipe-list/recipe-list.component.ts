@@ -6,8 +6,8 @@ import {RecipeItemComponent} from './recipe-item.component';
   templateUrl: './recipe-list.component.html'
 })
 export class RecipeListComponent {
-	recipes:Recipe[]=[];
-	recipe=new Recipe("Allo tikki","Snacks","../../../assets/Aloo-Tikki.jpg");
+	recipes:Recipe[]=  [new Recipe("Allo tikki","Snacks","../../../assets/Aloo-Tikki.jpg",[]),
+  new Recipe("Noodles","Snacks","../../../assets/Noodles.jpg",[])];
 	@Output() selectedRecipe = new EventEmitter<Recipe>();
     constructor() { }
     onSelected(recipe:Recipe){
