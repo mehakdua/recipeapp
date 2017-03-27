@@ -13,7 +13,11 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.component';
 import { DirectiveListComponent } from './directive-list/directive-list.component';
 import { HighlightDirective } from './directive-list/highlight.directive';
+<<<<<<< HEAD
 import { UnlessDirective } from './directive-list/unless.directive';
+=======
+import { OtherhighlightDirective } from './directive-list/otherhighlight.directive';
+>>>>>>> b5ffca2c5c64f59d145633a003e1c29e5b186d7e
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { UnlessDirective } from './directive-list/unless.directive';
     ShoppingListAddComponent,
     DirectiveListComponent,
     HighlightDirective,
+<<<<<<< HEAD
     UnlessDirective
+=======
+    OtherhighlightDirective
+>>>>>>> b5ffca2c5c64f59d145633a003e1c29e5b186d7e
   ],
   imports: [
     BrowserModule,
