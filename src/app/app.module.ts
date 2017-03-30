@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -13,7 +13,9 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.component';
 import { DirectiveListComponent } from './directive-list/directive-list.component';
 import { HighlightDirective } from './directive-list/highlight.directive';
+import { UnlessDirective } from './directive-list/unless.directive';
 import { OtherhighlightDirective } from './directive-list/otherhighlight.directive';
+import { DropdownDirective } from './dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -27,12 +29,15 @@ import { OtherhighlightDirective } from './directive-list/otherhighlight.directi
     ShoppingListAddComponent,
     DirectiveListComponent,
     HighlightDirective,
-    OtherhighlightDirective
+    UnlessDirective,
+    OtherhighlightDirective,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

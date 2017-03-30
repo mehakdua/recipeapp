@@ -4,3 +4,12 @@
 	<rb-shopping-list></rb-shopping-list>
 	<rb-directive-list></rb-directive-list>
 </div>
+<div [ngSwitch]="value">
+	<p *ngSwitchCase = "10">10</p>
+	<p *ngSwitchCase = "20">20</p>
+</div>
+<div [ngSwitch]="value">
+	<template [ngSwitchCase] = "10">10</template>
+	<template [ngSwitchCase] = "20">20</template>
+	<template [ngSwitchDefault ]= "Default">Default</template>
+</div>
