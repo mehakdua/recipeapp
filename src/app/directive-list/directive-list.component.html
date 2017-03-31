@@ -1,3 +1,16 @@
 
 <div rbHighlight>Other text</div>
 <div myOtherhighlight>Other tex2t</div>
+<div>
+	<input type="text" #input />
+	<button (click)="onLog(input.value)">Log it</button>
+	<button (click)="onStore(input.value)">Store</button>
+	<button (click)="onlets(input.value)">C</button>
+</div>
+
+<div>Show data
+	<button (click)="onRefresh()">Refresh</button>
+	<ul>
+		<li *ngFor="let i of items">{{i}}</li>
+	</ul>
+</div>
