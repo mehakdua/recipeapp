@@ -6,6 +6,9 @@ private items:string[]=[];
   }
   logdata(){
   	return this.items;
+ }
+  setVal(val:string){
+  	 console.log(val);
   }
 
 }
