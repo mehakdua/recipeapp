@@ -1,18 +1,20 @@
-import { Component,Input,EventEmitter,Output } from '@angular/core';
+import { Component,OnInit,Input,EventEmitter,Output } from '@angular/core';
 import {Recipe} from '../recipe';
 import {RecipeItemComponent} from './recipe-item.component';
+import {RecipeService} from '../recipe.service';
 @Component({
   selector: 'rb-recipe-list',
-  templateUrl: './recipe-list.component.html'
+  templateUrl: './recipe-list.component.html',
+  providers:[RecipeService]
 })
 export class RecipeListComponent {
-	recipes:Recipe[]=  [new Recipe("Allo tikki","Snacks","../../../assets/Aloo-Tikki.jpg",[]),
-  new Recipe("Noodles","Snacks","../../../assets/Noodles.jpg",[])];
+	recipes:Recipe[] =[];
 	@Output() selectedRecipe = new EventEmitter<Recipe>();
-    constructor() { }
+    constructor(private recipeService:RecipeService ) { }
+    ngOnInit(){
+     this.recipes = this.recipeService.getRecipes();
+    }
     onSelected(recipe:Recipe){
-    console.log(recipe.name);
     		this.selectedRecipe.emit(recipe);
     }
-  
 }

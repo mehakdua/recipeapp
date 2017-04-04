@@ -16,6 +16,7 @@ import { HighlightDirective } from './directive-list/highlight.directive';
 import { UnlessDirective } from './directive-list/unless.directive';
 import { OtherhighlightDirective } from './directive-list/otherhighlight.directive';
 import { DropdownDirective } from './dropdown.directive';
+import { OtherComponent } from './directive-list/other.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { DropdownDirective } from './dropdown.directive';
     HighlightDirective,
     UnlessDirective,
     OtherhighlightDirective,
-    DropdownDirective
+    DropdownDirective,
+    OtherComponent
   ],
   imports: [
     BrowserModule,
