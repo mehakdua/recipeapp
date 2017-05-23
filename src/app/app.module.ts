@@ -5,13 +5,10 @@ import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './recipes/recipe-list/recipe-item.component';
-import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeModule} from './recipes/recipe.module';
+import { ShoppingModule } from './shopping-list/shopping.module';
+import { AppRoutingModule} from './app.routes';
 import { DataService} from './directive-list/data.service';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingListAddComponent } from './shopping-list/shopping-list-add.component';
 import { DirectiveListComponent } from './directive-list/directive-list.component';
 import { HighlightDirective } from './directive-list/highlight.directive';
 import { UnlessDirective } from './directive-list/unless.directive';
@@ -23,24 +20,21 @@ import { OtherComponent } from './directive-list/other.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeItemComponent,
-    RecipeDetailComponent,
-    ShoppingListComponent,
-    ShoppingListAddComponent,
     DirectiveListComponent,
     HighlightDirective,
     UnlessDirective,
     OtherhighlightDirective,
     DropdownDirective,
-    OtherComponent
+    OtherComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    CommonModule
+    CommonModule,
+    RecipeModule,
+    ShoppingModule,
+    AppRoutingModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

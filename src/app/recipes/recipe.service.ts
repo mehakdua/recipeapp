@@ -1,5 +1,5 @@
 import {Recipe} from './recipe';
-import {Ingredient} from '../Ingredient';
+import {Ingredient} from '../ingredient';
 export class RecipeService {
 recipes:Recipe[]= [new Recipe("Allo tikki","Snacks","../../../assets/Aloo-Tikki.jpg",[new Ingredient("Meat","1")
 ,new Ingredient("Bacon","1")]),
@@ -8,5 +8,8 @@ recipes:Recipe[]= [new Recipe("Allo tikki","Snacks","../../../assets/Aloo-Tikki.
 	getRecipes(){
 		return this.recipes;
 	}  
+	deleteRecipe(i){
+		this.recipes.splice(i,1);
+	}
 
 }

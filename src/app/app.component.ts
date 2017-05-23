@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {HeaderComponent} from './header.component';
-import {RecipesComponent} from './recipes/recipes.component';
-import {ShoppingListComponent} from './shopping-list/shopping-list.component';
+import { RecipeModule} from './recipes/recipe.module';
+import {ShoppingModule} from './shopping-list/shopping.module';
 import { LogService} from './directive-list/log.service';
 import { ShoppingListService} from './shopping-list/shopping-list.service';
 import {DirectiveListComponent} from './directive-list/directive-list.component';
