@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { RecipeModule} from './recipes/recipe.module';
+import { ShoppingListService} from './shopping-list/shopping-list.service';
 import { ShoppingModule } from './shopping-list/shopping.module';
 import { AppRoutingModule} from './app.routes';
 import { DataService} from './directive-list/data.service';
@@ -36,7 +37,7 @@ import { OtherComponent } from './directive-list/other.component';
     ShoppingModule,
     AppRoutingModule
   ],
-  providers: [DataService],
+  providers: [DataService,ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -4,9 +4,10 @@ import {CommonModule} from '@angular/common';
 import {ShoppingListComponent} from './shopping-list.component';
 import { ShoppingListAddComponent } from './shopping-list-add.component';
 import { ShoppingRouterModule } from './shopping.router';
+
 @NgModule({
 	imports:[
-	CommonModule,
+		CommonModule,
 		ShoppingRouterModule
 	],
 	declarations:[

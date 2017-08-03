@@ -1,7 +1,8 @@
 import {Ingredient} from '../ingredient';
 export class ShoppingListService {
   private items:Ingredient []=[];
-  constructor() { }
+  constructor() { 
+  console.log("shopping-service");}
   additems(items:Ingredient[]){
    Array.prototype.push.apply(this.items,items);
   }
